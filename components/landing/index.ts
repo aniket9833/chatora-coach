@@ -1,0 +1,11 @@
+export { Navbar } from "./navbar";
+export { Hero } from "./hero";
+export { ProblemEmpathy } from "./problem-empathy";
+export { SystemPlan } from "./system-plan";
+export { StakesStrip } from "./stakes-strip";
+export { Benefits } from "./benefits";
+export { Plans } from "./plans";
+export { RulesProtect } from "./rules-protect";
+export { FAQ } from "./faq";
+export { CTA } from "./cta";
+export { Footer } from "./footer";
