@@ -1,15 +1,16 @@
 "use client";
 
-import { AlertCircle, Heart } from "lucide-react";
+import { AlertCircle, Heart, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export function ProblemEmpathy() {
   return (
-    <section className="py-16 lg:py-24 bg-secondary/30">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="relative py-20 lg:py-28 bg-gradient-to-b from-secondary/40 via-background to-background overflow-hidden">
+      <div className="mx-auto px-4 lg:px-8 max-w-6xl">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="font-serif text-3xl lg:text-4xl font-bold mb-6 text-balance">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h2 className="font-serif text-3xl lg:text-5xl font-bold mb-6">
             Why Strict Diets Fail in Real Indian Life
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -17,29 +18,26 @@ export function ProblemEmpathy() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Problems - External */}
-          <Card className="border-0 shadow-none bg-background/50">
-            <CardContent className="pt-8">
-              <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
+        {/* Problem & Empathy Cards */}
+        <div className="grid lg:grid-cols-2 gap-10 mb-16">
+          {/* Problem Card */}
+          <Card className="rounded-2xl border border-border bg-card shadow-sm hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center">
                   <AlertCircle className="w-6 h-6 text-destructive" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-4">The Real Problem</h3>
-                </div>
+                <h3 className="font-semibold text-xl">The Real Problem</h3>
               </div>
 
-              <ul className="space-y-4">
+              <ul className="space-y-5 text-muted-foreground leading-relaxed">
                 {[
-                  "Strict diets demand separate meals—not realistic for Indian homes where everyone eats together",
-                  "Every environment pushes unhealthy choices: office snacks, family meals, functions, travel",
-                  "Online advice conflicts: keto vs detox vs fasting. You feel confused and stuck",
+                  "Strict diets demand separate meals — unrealistic in Indian homes.",
+                  "Office snacks, family functions, travel — environment works against you.",
+                  "Keto vs detox vs fasting — conflicting advice creates confusion.",
                 ].map((problem, i) => (
-                  <li key={i} className="flex gap-3 text-muted-foreground">
-                    <span className="text-primary font-bold flex-shrink-0">
-                      •
-                    </span>
+                  <li key={i} className="flex gap-3">
+                    <span className="mt-1 w-2 h-2 rounded-full bg-destructive flex-shrink-0" />
                     <span>{problem}</span>
                   </li>
                 ))}
@@ -47,37 +45,36 @@ export function ProblemEmpathy() {
             </CardContent>
           </Card>
 
-          {/* Empathy - Internal + Who It's For */}
-          <Card className="border-0 shadow-none bg-primary/5">
-            <CardContent className="pt-8">
-              <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+          {/* Empathy Card */}
+          <Card className="rounded-2xl border border-border bg-primary/5 shadow-sm hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <Heart className="w-6 h-6 text-primary" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-4">
-                    What You&apos;re Feeling
-                  </h3>
-                </div>
+                <h3 className="font-semibold text-xl">
+                  What You&apos;re Feeling
+                </h3>
               </div>
 
-              <div className="space-y-4">
-                <p className="text-muted-foreground">
+              <div className="space-y-5 text-muted-foreground leading-relaxed">
+                <p>
                   <strong className="text-foreground">Guilt</strong> after
                   eating normal food.
                 </p>
-                <p className="text-muted-foreground">
+                <p>
                   <strong className="text-foreground">Low confidence:</strong>{" "}
-                  &quot;I cannot stick to any plan.&quot;
+                  “I cannot stick to any plan.”
                 </p>
-                <p className="text-muted-foreground">
+                <p>
                   <strong className="text-foreground">Mental fatigue:</strong>{" "}
                   Overthinking every bite.
                 </p>
-                <div className="pt-4 border-t border-border">
-                  <p className="text-sm font-semibold text-primary">
-                    👉 If you&apos;ve &quot;started Monday&quot; many times,
-                    you&apos;re not weak—your plan was.
+
+                <div className="pt-6 border-t border-border">
+                  <p className="font-semibold text-primary">
+                    👉 If you&apos;ve “started Monday” many times, you&apos;re
+                    not weak — your plan was.
                   </p>
                 </div>
               </div>
@@ -85,32 +82,53 @@ export function ProblemEmpathy() {
           </Card>
         </div>
 
-        {/* Who It's For / Not For */}
-        <div className="mt-12 max-w-3xl mx-auto">
-          <h3 className="font-semibold text-lg text-center mb-8">
+        {/* Who It's For Section */}
+        <div className="bg-card border border-border rounded-2xl p-10 shadow-sm">
+          <h3 className="font-serif text-2xl font-bold text-center mb-10">
             Is This For You?
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Perfect For */}
             <div>
-              <p className="font-bold text-primary mb-4">✓ Perfect For:</p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <p className="font-semibold text-primary mb-6 text-lg">
+                ✓ Perfect For
+              </p>
+              <ul className="space-y-4 text-muted-foreground">
                 <li>
-                  ✓ Foodies who want fat loss without quitting favourite foods
+                  Food lovers who want fat loss without quitting favourites
                 </li>
-                <li>✓ Postpartum recovery (Premium plan only)</li>
-                <li>✓ Managing PCOS, thyroid, BP naturally</li>
-                <li>✓ Busy professionals juggling home, office, functions</li>
+                <li>Postpartum recovery (Premium plan)</li>
+                <li>Managing PCOS, thyroid, BP naturally</li>
+                <li>Busy professionals balancing work & home</li>
               </ul>
             </div>
+
+            {/* Not For */}
             <div>
-              <p className="font-bold text-destructive mb-4">✗ Not For:</p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>✗ Unwilling to log food once per day</li>
-                <li>✗ Looking for magic pills or 7-day fixes</li>
-                <li>✗ Want to eat anything without structure</li>
-                <li>✗ Medical diagnosis (follow doctor guidance)</li>
+              <p className="font-semibold text-destructive mb-6 text-lg">
+                ✗ Not For
+              </p>
+              <ul className="space-y-4 text-muted-foreground">
+                <li>Unwilling to log food once daily</li>
+                <li>Looking for 7-day miracle fixes</li>
+                <li>Want zero structure</li>
+                <li>Active medical cases (follow doctor advice)</li>
               </ul>
             </div>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-16 text-center">
+          <div className="inline-block bg-primary/5 px-10 py-8 rounded-2xl border border-primary/20">
+            <p className="text-lg font-medium mb-6">
+              Ready to stop restarting every Monday?
+            </p>
+            <Button size="lg" className="px-10 text-base">
+              START YOUR JOURNEY
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </div>

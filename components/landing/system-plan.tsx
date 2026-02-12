@@ -1,7 +1,8 @@
 "use client";
 
-import { Utensils, Settings2, CheckSquare } from "lucide-react";
+import { Utensils, Settings2, CheckSquare, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export function SystemPlan() {
   const steps = [
@@ -81,6 +82,14 @@ export function SystemPlan() {
               changes.
             </p>
           </div>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-12 text-center">
+          <Button size="lg" className="px-8">
+            EXPLORE PLANS
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
         </div>
       </div>
     </section>

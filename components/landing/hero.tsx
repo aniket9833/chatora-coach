@@ -40,7 +40,8 @@ export function Hero() {
             </p>
 
             <p className="animate-fade-in-up animation-delay-250 text-base text-muted-foreground max-w-xl italic">
-              No food bans. Real-life execution.
+              Fat loss should not require quitting your culture, family meals,
+              or favourite foods.
             </p>
 
             <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-4">
@@ -48,13 +49,13 @@ export function Hero() {
                 START
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button
+              {/* <Button
                 size="lg"
                 variant="outline"
                 className="text-base px-8 bg-transparent"
               >
                 Learn More
-              </Button>
+              </Button> */}
             </div>
 
             {/* Trust Indicators */}

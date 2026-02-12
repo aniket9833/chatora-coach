@@ -1,7 +1,7 @@
 "use client";
 
-import { Check } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Check, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Benefits() {
   const benefits = [
@@ -14,9 +14,9 @@ export function Benefits() {
 
   return (
     <section className="py-16 lg:py-24 bg-background">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="mx-auto px-4 lg:px-8 max-w-5xl">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto mb-12">
+        <div className="mb-12">
           <h2 className="font-serif text-3xl lg:text-4xl font-bold mb-6">
             What You Get
           </h2>
@@ -27,19 +27,25 @@ export function Benefits() {
         </div>
 
         {/* Benefits Grid */}
-        <div className="max-w-2xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-4">
+        <div className="w-full">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {benefits.map((benefit, i) => (
-              <Card key={i} className="border-0 shadow-none bg-secondary/20">
-                <CardContent className="pt-6 pb-6">
-                  <div className="flex gap-4">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                    <p className="text-muted-foreground">{benefit}</p>
-                  </div>
-                </CardContent>
-              </Card>
+              <div key={i} className="flex gap-4">
+                <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  {benefit}
+                </p>
+              </div>
             ))}
           </div>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-12 text-center">
+          <Button size="lg" className="px-8">
+            GET STARTED
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
         </div>
       </div>
     </section>

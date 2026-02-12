@@ -11,6 +11,7 @@ import {
   CTA,
   Footer,
 } from "@/components/landing";
+import { Testimonials } from "@/components/landing/testimonials";
 
 export default function HomePage() {
   return (
@@ -24,6 +25,7 @@ export default function HomePage() {
       <Plans />
       <RulesProtect />
       <FAQ />
+      <Testimonials />
       <CTA />
       <Footer />
     </main>

@@ -7,44 +7,40 @@ import { Quote, Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "I lost 8 kgs in 3 months without giving up my favorite foods. The portion guidance changed everything for me!",
-    author: "Priya S.",
-    role: "Working Professional",
+      "I'm a 31-year-old mom, and Moves n Stretch Studio changed my life. With their diet plan and fun Zumba classes, I lost 12 kilograms and lots of inches. The instructors were so supportive and made every class exciting. Moms, if you want to feel great, check out Moves n Stretch Studio. They're the best!",
+    author: "Akshata Takwale",
     rating: 5,
   },
   {
     quote:
-      "As a new mom, I needed something flexible. The home-food plan fit perfectly into my chaotic schedule.",
-    author: "Ananya R.",
-    role: "New Mother",
+      "Moves n Stretch Studio has truly been a game-changer in my health journey. With their expert instructors and personalized diet plans, I lost 10 kilograms in three months, and my blood markers normalized, leading my doctor to stop my diabetes medication. The care, knowledge, and support provided by the instructors are unparalleled. If you're seeking real, life-changing results, look no further than Moves n Stretch Studio. Highly recommended!",
+    author: "Poonam Bodade",
     rating: 5,
   },
   {
     quote:
-      "My thyroid numbers improved significantly. The accountability calls kept me motivated throughout.",
-    author: "Meera K.",
-    role: "Teacher",
+      "Joining Moves and stretch studio have not only sculpted my physique but also became a powerful ally in managing my pcod. As I committed to my fitness routine,stamina was nothing short of remarkable.from conquering challenging workouts to embracing energetic group classes, each day unveiled a newfound strength. Beyond physical changes ,the holistic approach of diet and mindfulness activites, guided me towards self discovery and renewed sense of confidence. Moves and stretch studio is a place where commitment to your well being extends beyond the gym creating an environment where PCOD management increase in stamina and positive self image converts into a harmonious empowering experience",
+    author: "Dr. Nupur Tidke",
     rating: 5,
   },
   {
     quote:
-      "Finally, a nutrition plan that doesn't feel like a punishment. Simple, practical, and actually sustainable!",
-    author: "Deepak M.",
-    role: "Entrepreneur",
+      "As a 30-year-old woman with a hectic lifestyle, Moves N Stretch Studio has been a game-changer in my postpartum recovery. Initially, I struggled with fragmented approaches, but their practical, well-researched methods made all the difference. The instructors (Mayur sir & Varsha mam)provide personalized, manageable fitness routines and a diet plan that's easy to follow. Their holistic approach has helped me regain strength and confidence, making the postpartum journey much more manageable. Highly recommended!",
+    author: "Anonymous",
     rating: 5,
   },
 ];
 
-const quotes = [
-  {
-    text: "Your body is a reflection of your lifestyle, not a project with an expiration date.",
-    author: "NutriLife Philosophy",
-  },
-  {
-    text: "Small changes, consistently applied, lead to remarkable transformations.",
-    author: "Coach Wisdom",
-  },
-];
+// const quotes = [
+//   {
+//     text: "Fat loss should not require quitting your culture, family meals, or favourite foods.",
+//     author: "Philosophical belief",
+//   },
+//   // {
+//   //   text: "Small changes, consistently applied, lead to remarkable transformations.",
+//   //   author: "Coach Wisdom",
+//   // },
+// ];
 
 export function Testimonials() {
   return (
@@ -69,23 +65,27 @@ export function Testimonials() {
           {testimonials.map((testimonial) => (
             <Card
               key={testimonial.author}
-              className="bg-card border-border hover:shadow-lg transition-shadow"
+              className="bg-card border-border hover:shadow-lg transition-shadow h-[420px] flex flex-col"
             >
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col h-full">
+                {/* Rating */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                   ))}
                 </div>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {`"${testimonial.quote}"`}
-                </p>
-                <div>
+
+                {/* Scrollable Quote */}
+                <div className="flex-1 overflow-y-auto pr-2 mb-4 scrollbar-thin">
+                  <p className="text-muted-foreground leading-relaxed">
+                    {`"${testimonial.quote}"`}
+                  </p>
+                </div>
+
+                {/* Author */}
+                <div className="pt-4 border-t border-border">
                   <p className="font-semibold text-foreground">
                     {testimonial.author}
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    {testimonial.role}
                   </p>
                 </div>
               </CardContent>
@@ -93,7 +93,7 @@ export function Testimonials() {
           ))}
         </div>
 
-        {/* Inspirational Quotes */}
+        {/* Inspirational Quotes
         <div className="grid md:grid-cols-2 gap-8">
           {quotes.map((quote) => (
             <div
@@ -113,7 +113,7 @@ export function Testimonials() {
               </blockquote>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

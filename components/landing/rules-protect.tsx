@@ -1,7 +1,8 @@
 "use client";
 
-import { Shield } from "lucide-react";
+import { Shield, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export function RulesProtect() {
   const rules = [
@@ -44,7 +45,8 @@ export function RulesProtect() {
             Rules That Protect Your Results
           </h2>
           <p className="text-lg text-muted-foreground">
-            {"These aren't restrictions. They're guardrails for your success"}.
+            These aren&apos;t restrictions. They&apos;re guardrails for your
+            success.
           </p>
         </div>
 
@@ -62,6 +64,14 @@ export function RulesProtect() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-12 text-center">
+          <Button size="lg" className="px-8">
+            START NOW
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
         </div>
       </div>
     </section>
