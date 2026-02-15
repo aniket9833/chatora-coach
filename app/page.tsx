@@ -5,7 +5,6 @@ import {
   SystemPlan,
   StakesStrip,
   Benefits,
-  Plans,
   RulesProtect,
   FAQ,
   CTA,
@@ -22,7 +21,6 @@ export default function HomePage() {
       <SystemPlan />
       <StakesStrip />
       <Benefits />
-      <Plans />
       <RulesProtect />
       <FAQ />
       <Testimonials />

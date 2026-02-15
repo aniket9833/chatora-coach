@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -45,10 +46,12 @@ export function Hero() {
             </p>
 
             <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-base px-8 group">
-                START
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/plans">
+                <Button size="lg" className="text-base px-8 group">
+                  START
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
               {/* <Button
                 size="lg"
                 variant="outline"

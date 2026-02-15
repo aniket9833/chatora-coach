@@ -15,19 +15,19 @@ import {
 const footerLinks = {
   company: [
     { label: "About Us", href: "#" },
-    { label: "Our Team", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Blog", href: "#" },
+    // { label: "Our Team", href: "#" },
+    // { label: "Careers", href: "#" },
+    // { label: "Blog", href: "#" },
   ],
   services: [
-    { label: "Essential Plans", href: "#plans" },
-    { label: "Corporate Wellness", href: "#" },
-    { label: "Group Coaching", href: "#" },
+    { label: "Essential Plans", href: "/plans" },
+    // { label: "Corporate Wellness", href: "#" },
+    // { label: "Group Coaching", href: "#" },
     { label: "1-on-1 Coaching", href: "#" },
   ],
   support: [
     { label: "FAQ", href: "#faq" },
-    { label: "Contact Us", href: "#contact" },
+    // { label: "Contact Us", href: "#contact" },
     { label: "Privacy Policy", href: "#" },
     { label: "Terms of Service", href: "#" },
   ],

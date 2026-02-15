@@ -3,6 +3,7 @@
 import { Utensils, Settings2, CheckSquare, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function SystemPlan() {
   const steps = [
@@ -86,10 +87,12 @@ export function SystemPlan() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <Button size="lg" className="px-8">
-            EXPLORE PLANS
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Link href="/plans">
+            <Button size="lg" className="px-8">
+              START
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

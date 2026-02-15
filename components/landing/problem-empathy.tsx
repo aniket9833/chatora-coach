@@ -3,6 +3,7 @@
 import { AlertCircle, Heart, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function ProblemEmpathy() {
   return (
@@ -125,10 +126,12 @@ export function ProblemEmpathy() {
             <p className="text-lg font-medium mb-6">
               Ready to stop restarting every Monday?
             </p>
-            <Button size="lg" className="px-10 text-base">
-              START YOUR JOURNEY
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/plans">
+              <Button size="lg" className="px-10 text-base">
+                START
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

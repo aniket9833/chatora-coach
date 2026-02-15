@@ -2,6 +2,7 @@
 
 import { Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Benefits() {
   const benefits = [
@@ -42,10 +43,12 @@ export function Benefits() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <Button size="lg" className="px-8">
-            GET STARTED
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Link href="/plans">
+            <Button size="lg" className="px-8">
+              START
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

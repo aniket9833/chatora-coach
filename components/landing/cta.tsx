@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 export function CTA() {
   return (
@@ -24,14 +25,16 @@ export function CTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              variant="secondary"
-              className="text-base px-8 group"
-            >
-              START NOW
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link href="/plans">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="text-base px-8 group"
+              >
+                START
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"

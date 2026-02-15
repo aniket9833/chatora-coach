@@ -10,9 +10,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check } from "lucide-react";
+import { Check, Calendar } from "lucide-react";
+import { paymentLinks } from "@/lib/bookingLinks";
+import Link from "next/link";
 
-export function Plans() {
+interface PlansProps {
+  showPaymentLinks?: boolean;
+}
+
+export function Plans({ showPaymentLinks = false }: PlansProps) {
   const plans = [
     {
       name: "Trial",
@@ -27,6 +33,7 @@ export function Plans() {
         "Basic portion guidance",
       ],
       popular: false,
+      link: paymentLinks.plan1,
     },
     {
       name: "Standard",
@@ -43,6 +50,7 @@ export function Plans() {
         "Progress tracking",
       ],
       popular: true,
+      link: paymentLinks.plan2,
     },
     {
       name: "Premium",
@@ -61,6 +69,7 @@ export function Plans() {
       ],
       postpartumOnly: true,
       popular: false,
+      link: paymentLinks.plan3,
     },
   ];
 
@@ -82,10 +91,10 @@ export function Plans() {
           {plans.map((plan, index) => (
             <Card
               key={index}
-              className={`flex flex-col transition-all relative ${
+              className={`flex flex-col transition-all duration-300 relative transform hover:scale-105 hover:shadow-2xl ${
                 plan.popular
-                  ? "border-primary shadow-lg"
-                  : "border-border hover:shadow-md"
+                  ? "border-primary shadow-lg hover:border-primary/80"
+                  : "border-border hover:shadow-md hover:border-primary"
               }`}
             >
               {plan.popular && (
@@ -127,23 +136,54 @@ export function Plans() {
               </CardContent>
 
               <CardFooter>
-                <Button
-                  className={`w-full ${!plan.popular ? "bg-transparent" : ""}`}
-                  variant={plan.popular ? "default" : "outline"}
+                <Link
+                  href={showPaymentLinks ? plan.link : "/plans"}
+                  {...(showPaymentLinks && {
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  })}
+                  className="w-full"
                 >
-                  START
-                </Button>
+                  <Button
+                    className={`w-full transition-all duration-200 hover:opacity-90 ${!plan.popular ? "bg-transparent" : ""}`}
+                    variant={plan.popular ? "default" : "outline"}
+                  >
+                    START
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}
         </div>
 
         {/* Refund Policy */}
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center mb-12">
           <p className="text-sm text-muted-foreground">
             💡 <strong>Fair Policy:</strong> Payments are non-refundable. This
             ensures we are committed to your results—and you are committed to
             the process.
+          </p>
+        </div>
+
+        {/* Free Discovery Call Button */}
+        <div className="max-w-2xl mx-auto text-center">
+          <Link
+            href={paymentLinks.discovery}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              size="lg"
+              variant="default"
+              className="gap-2 transition-all duration-200 hover:scale-105 hover:shadow-lg"
+            >
+              <Calendar className="w-5 h-5" />
+              Book Your Free Discovery Call
+            </Button>
+          </Link>
+          <p className="text-sm text-muted-foreground mt-4">
+            Not sure which plan is right for you? Schedule a free 15-minute call
+            with our coaches.
           </p>
         </div>
       </div>
