@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 import {
   Instagram,
   Facebook,
@@ -10,34 +10,46 @@ import {
   Mail,
   MapPin,
   Phone,
-} from "lucide-react";
+} from 'lucide-react';
 
 const footerLinks = {
   company: [
-    { label: "About Us", href: "#" },
+    { label: 'About Us', href: '#' },
     // { label: "Our Team", href: "#" },
     // { label: "Careers", href: "#" },
     // { label: "Blog", href: "#" },
   ],
   services: [
-    { label: "Essential Plans", href: "/plans" },
+    { label: 'Essential Plans', href: '/plans' },
     // { label: "Corporate Wellness", href: "#" },
     // { label: "Group Coaching", href: "#" },
-    { label: "1-on-1 Coaching", href: "#" },
+    { label: '1-on-1 Coaching', href: '#' },
   ],
   support: [
-    { label: "FAQ", href: "#faq" },
+    { label: 'FAQ', href: '#faq' },
     // { label: "Contact Us", href: "#contact" },
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
+    { label: 'Privacy Policy', href: '#' },
+    { label: 'Terms of Service', href: '#' },
   ],
 };
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Youtube, href: "#", label: "YouTube" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  {
+    icon: Instagram,
+    href: 'https://www.instagram.com/chatoracoach?igsh=dXg0Z3YydG10b2hs',
+    label: 'Instagram',
+  },
+  {
+    icon: Facebook,
+    href: 'https://www.facebook.com/profile.php?id=61588289160093',
+    label: 'Facebook',
+  },
+  {
+    icon: Youtube,
+    href: 'https://youtube.com/@chatoracoach?si=ORih_P52ZQPaT_Su',
+    label: 'YouTube',
+  },
+  // { icon: Linkedin, href: '#', label: 'LinkedIn' },
 ];
 
 export function Footer() {
