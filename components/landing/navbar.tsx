@@ -1,40 +1,42 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Menu } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { BookingForm } from './booking-form';
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "/plans", label: "Plans" },
-  { href: "#why-us", label: "Why Us" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: '#home', label: 'Home' },
+  { href: '/plans', label: 'Plans' },
+  { href: '#why-us', label: 'Why Us' },
+  { href: '#faq', label: 'FAQ' },
+  { href: '#contact', label: 'Contact' },
 ];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border"
-          : "bg-transparent",
+          ? 'bg-background/95 backdrop-blur-md shadow-sm border-b border-border'
+          : 'bg-transparent',
       )}
     >
       <nav className="container mx-auto px-4 lg:px-8">
@@ -65,7 +67,9 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button size="sm">Book Consultation</Button>
+            <Button size="sm" onClick={() => setIsBookingFormOpen(true)}>
+              Book Consultation
+            </Button>
           </div>
 
           {/* Mobile Menu */}
@@ -89,13 +93,26 @@ export function Navbar() {
                   </Link>
                 ))}
                 <div className="flex flex-col gap-3 mt-4">
-                  <Button className="w-full">Book Consultation</Button>
+                  <Button
+                    className="w-full"
+                    onClick={() => {
+                      setIsBookingFormOpen(true);
+                      setIsOpen(false);
+                    }}
+                  >
+                    Book Consultation
+                  </Button>
                 </div>
               </div>
             </SheetContent>
           </Sheet>
         </div>
       </nav>
+
+      <BookingForm
+        open={isBookingFormOpen}
+        onOpenChange={setIsBookingFormOpen}
+      />
     </header>
   );
 }
