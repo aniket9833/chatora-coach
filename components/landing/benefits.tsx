@@ -14,14 +14,14 @@ export function Benefits() {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-background">
-      <div className="mx-auto px-4 lg:px-8 max-w-5xl">
+    <section className="py-12 sm:py-16 lg:py-24 bg-background">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
         {/* Section Header */}
-        <div className="mb-12">
-          <h2 className="font-serif text-3xl lg:text-4xl font-bold mb-6">
+        <div className="mb-8 sm:mb-12">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
             What You Get
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground">
             Everything you need for sustainable fat loss—without feeling
             deprived.
           </p>
@@ -29,11 +29,11 @@ export function Benefits() {
 
         {/* Benefits Grid */}
         <div className="w-full">
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             {benefits.map((benefit, i) => (
-              <div key={i} className="flex gap-4">
-                <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-base text-muted-foreground leading-relaxed">
+              <div key={i} className="flex gap-3 sm:gap-4">
+                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-1" />
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {benefit}
                 </p>
               </div>
@@ -42,7 +42,7 @@ export function Benefits() {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 text-center">
+        <div className="mt-8 sm:mt-12 text-center">
           <Link href="/plans">
             <Button size="lg" className="px-8">
               START

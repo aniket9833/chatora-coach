@@ -39,26 +39,26 @@ export function Navbar() {
           : 'bg-transparent',
       )}
     >
-      <nav className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
             <Image
               src="/logo.png"
               alt="Chatora Coach Logo"
               width={250}
               height={250}
-              className="w-20 h-20 object-contain"
+              className="w-12 sm:w-16 lg:w-20 h-12 sm:h-16 lg:h-20 object-contain"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="text-xs lg:text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 {link.label}
               </Link>
@@ -67,7 +67,11 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button size="sm" onClick={() => setIsBookingFormOpen(true)}>
+            <Button
+              size="sm"
+              onClick={() => setIsBookingFormOpen(true)}
+              className="text-xs lg:text-sm"
+            >
               Book Consultation
             </Button>
           </div>
@@ -75,26 +79,30 @@ export function Navbar() {
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-9 w-9 sm:h-10 sm:w-10"
+              >
+                <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full sm:w-80">
-              <div className="flex flex-col gap-6 mt-8">
+            <SheetContent side="right" className="w-full sm:w-80 p-4 sm:p-6">
+              <div className="flex flex-col gap-4 sm:gap-6 mt-6 sm:mt-8">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                    className="text-base sm:text-lg font-medium text-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </Link>
                 ))}
-                <div className="flex flex-col gap-3 mt-4">
+                <div className="flex flex-col gap-2 sm:gap-3 mt-4 sm:mt-6">
                   <Button
-                    className="w-full"
+                    className="w-full text-xs sm:text-sm h-9 sm:h-10"
                     onClick={() => {
                       setIsBookingFormOpen(true);
                       setIsOpen(false);
