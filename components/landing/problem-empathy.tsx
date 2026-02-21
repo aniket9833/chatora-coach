@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { AlertCircle, Heart, ArrowRight } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { AlertCircle, Heart, ArrowRight } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export function ProblemEmpathy() {
   return (
@@ -33,9 +33,9 @@ export function ProblemEmpathy() {
 
               <ul className="space-y-5 text-muted-foreground leading-relaxed">
                 {[
-                  "Strict diets demand separate meals — unrealistic in Indian homes.",
-                  "Office snacks, family functions, travel — environment works against you.",
-                  "Keto vs detox vs fasting — conflicting advice creates confusion.",
+                  'Strict diets demand separate meals — unrealistic in Indian homes.',
+                  'Office snacks, family functions, travel — environment works against you.',
+                  'Keto vs detox vs fasting — conflicting advice creates confusion.',
                 ].map((problem, i) => (
                   <li key={i} className="flex gap-3">
                     <span className="mt-1 w-2 h-2 rounded-full bg-destructive flex-shrink-0" />
@@ -64,11 +64,11 @@ export function ProblemEmpathy() {
                   eating normal food.
                 </p>
                 <p>
-                  <strong className="text-foreground">Low confidence:</strong>{" "}
+                  <strong className="text-foreground">Low confidence:</strong>{' '}
                   “I cannot stick to any plan.”
                 </p>
                 <p>
-                  <strong className="text-foreground">Mental fatigue:</strong>{" "}
+                  <strong className="text-foreground">Mental fatigue:</strong>{' '}
                   Overthinking every bite.
                 </p>
 
@@ -99,9 +99,11 @@ export function ProblemEmpathy() {
                 <li>
                   Food lovers who want fat loss without quitting favourites
                 </li>
-                <li>Postpartum recovery (Premium plan)</li>
-                <li>Managing PCOS, thyroid, BP naturally</li>
-                <li>Busy professionals balancing work & home</li>
+                <li>
+                  Busy people struggling with cravings, eating out & consistency
+                </li>
+                <li>PCOS/thyroid/BP support alongside doctor guidance</li>
+                <li>Postpartum recovery support (Premium plan)</li>
               </ul>
             </div>
 
@@ -114,7 +116,7 @@ export function ProblemEmpathy() {
                 <li>Unwilling to log food once daily</li>
                 <li>Looking for 7-day miracle fixes</li>
                 <li>Want zero structure</li>
-                <li>Active medical cases (follow doctor advice)</li>
+                <li>Active medical cases without doctor guidance</li>
               </ul>
             </div>
           </div>

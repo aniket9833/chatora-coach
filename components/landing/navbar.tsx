@@ -12,9 +12,9 @@ import { BookingForm } from './booking-form';
 const navLinks = [
   { href: '#home', label: 'Home' },
   { href: '/plans', label: 'Plans' },
-  { href: '#why-us', label: 'Why Us' },
+  // { href: '#why-us', label: 'Why Us' },
   { href: '#faq', label: 'FAQ' },
-  { href: '#contact', label: 'Contact' },
+  // { href: '#contact', label: 'Contact' },
 ];
 
 export function Navbar() {

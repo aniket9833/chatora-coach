@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle } from "lucide-react";
-import Link from "next/link";
+import { Button } from '@/components/ui/button';
+import { ArrowRight, MessageCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export function CTA() {
   return (
@@ -35,14 +35,14 @@ export function CTA() {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Button
+            {/* <Button
               size="lg"
               variant="outline"
               className="text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground bg-transparent"
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               Chat on WhatsApp
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

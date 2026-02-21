@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -8,11 +8,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Check, Calendar } from "lucide-react";
-import { paymentLinks } from "@/lib/bookingLinks";
-import Link from "next/link";
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Check, Calendar } from 'lucide-react';
+import { paymentLinks } from '@/lib/bookingLinks';
+import Link from 'next/link';
 
 interface PlansProps {
   showPaymentLinks?: boolean;
@@ -21,51 +21,44 @@ interface PlansProps {
 export function Plans({ showPaymentLinks = false }: PlansProps) {
   const plans = [
     {
-      name: "Trial",
-      duration: "1 Month",
-      price: "₹1,999",
-      description: "Start your Portion Sahi journey",
+      name: 'Starter',
+      duration: '20 days',
+      price: '₹1,999',
+      description: 'Start your Portion Sahi journey',
       features: [
-        "Personalized home-food plan",
-        "2 coach consultations",
-        "Chat support Mon-Sat",
-        "App access",
-        "Basic portion guidance",
+        '1 Initial Diet Setup Call (30 min)',
+        '1 Follow-up Call (15 min)',
+        'Basic portion guidance',
+        'App access',
       ],
       popular: false,
       link: paymentLinks.plan1,
     },
     {
-      name: "Standard",
-      duration: "3 Months",
-      price: "₹4,999",
-      description: "Build lasting habits",
+      name: 'Standard',
+      duration: '12 Weeks',
+      price: '₹4,999',
+      description: 'Build lasting habits',
       features: [
-        "Personalized home-food plan",
-        "3 coach consultations",
-        "Chat support Mon-Sat",
-        "App access",
-        "Protein anchors explained",
-        "Eating-out & festival rules",
-        "Progress tracking",
+        '1 Initial Diet Setup Call (30 min)',
+        '6 Follow-up Calls (15 min)',
+        'Recipes + swaps included',
+        'App access',
       ],
       popular: true,
       link: paymentLinks.plan2,
     },
     {
-      name: "Premium",
-      duration: "3 Months",
-      price: "₹8,999",
-      description: "Complete transformation (Postpartum only)",
+      name: 'Premium',
+      duration: '12 Weeks',
+      price: '₹8,999',
+      description: 'Complete transformation (Postpartum only)',
       features: [
-        "Personalized home-food plan",
-        "4 coach consultations",
-        "Priority chat support Mon-Sat",
-        "App access",
-        "Protein anchors + habit layer",
-        "Eating-out, functions & travel rules",
-        "Flexible meal swaps",
-        "Email support for files/admin",
+        '1 Initial Diet Setup Call (30 min)',
+        '12 Follow-up Calls (weekly, 15 min)',
+        'Workouts included ONLY in Premium',
+        'Recipes + swaps included',
+        'App access',
       ],
       postpartumOnly: true,
       popular: false,
@@ -93,8 +86,8 @@ export function Plans({ showPaymentLinks = false }: PlansProps) {
               key={index}
               className={`flex flex-col transition-all duration-300 relative transform hover:scale-105 hover:shadow-2xl ${
                 plan.popular
-                  ? "border-primary shadow-lg hover:border-primary/80"
-                  : "border-border hover:shadow-md hover:border-primary"
+                  ? 'border-primary shadow-lg hover:border-primary/80'
+                  : 'border-border hover:shadow-md hover:border-primary'
               }`}
             >
               {plan.popular && (
@@ -105,7 +98,7 @@ export function Plans({ showPaymentLinks = false }: PlansProps) {
                 </div>
               )}
 
-              <CardHeader className={plan.popular ? "pt-8" : ""}>
+              <CardHeader className={plan.popular ? 'pt-8' : ''}>
                 <CardTitle className="text-2xl">{plan.name}</CardTitle>
                 <CardDescription>{plan.duration}</CardDescription>
                 {plan.postpartumOnly && (
@@ -137,16 +130,16 @@ export function Plans({ showPaymentLinks = false }: PlansProps) {
 
               <CardFooter>
                 <Link
-                  href={showPaymentLinks ? plan.link : "/plans"}
+                  href={showPaymentLinks ? plan.link : '/plans'}
                   {...(showPaymentLinks && {
-                    target: "_blank",
-                    rel: "noopener noreferrer",
+                    target: '_blank',
+                    rel: 'noopener noreferrer',
                   })}
                   className="w-full"
                 >
                   <Button
-                    className={`w-full transition-all duration-200 hover:opacity-90 ${!plan.popular ? "bg-transparent" : ""}`}
-                    variant={plan.popular ? "default" : "outline"}
+                    className={`w-full transition-all duration-200 hover:opacity-90 ${!plan.popular ? 'bg-transparent' : ''}`}
+                    variant={plan.popular ? 'default' : 'outline'}
                   >
                     START
                   </Button>

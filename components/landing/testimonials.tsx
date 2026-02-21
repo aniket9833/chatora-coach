@@ -1,32 +1,32 @@
-"use client";
+'use client';
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Quote, Star } from "lucide-react";
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Quote, Star } from 'lucide-react';
 
 const testimonials = [
   {
     quote:
       "I'm a 31-year-old mom, and Moves n Stretch Studio changed my life. With their diet plan and fun Zumba classes, I lost 12 kilograms and lots of inches. The instructors were so supportive and made every class exciting. Moms, if you want to feel great, check out Moves n Stretch Studio. They're the best!",
-    author: "Akshata Takwale",
+    author: 'Akshata Takwale',
     rating: 5,
   },
   {
     quote:
       "Moves n Stretch Studio has truly been a game-changer in my health journey. With their expert instructors and personalized diet plans, I lost 10 kilograms in three months, and my blood markers normalized, leading my doctor to stop my diabetes medication. The care, knowledge, and support provided by the instructors are unparalleled. If you're seeking real, life-changing results, look no further than Moves n Stretch Studio. Highly recommended!",
-    author: "Poonam Bodade",
+    author: 'Poonam Bodade',
     rating: 5,
   },
   {
     quote:
-      "Joining Moves and stretch studio have not only sculpted my physique but also became a powerful ally in managing my pcod. As I committed to my fitness routine,stamina was nothing short of remarkable.from conquering challenging workouts to embracing energetic group classes, each day unveiled a newfound strength. Beyond physical changes ,the holistic approach of diet and mindfulness activites, guided me towards self discovery and renewed sense of confidence. Moves and stretch studio is a place where commitment to your well being extends beyond the gym creating an environment where PCOD management increase in stamina and positive self image converts into a harmonious empowering experience",
-    author: "Dr. Nupur Tidke",
+      'Joining Moves and stretch studio have not only sculpted my physique but also became a powerful ally in managing my pcod. As I committed to my fitness routine,stamina was nothing short of remarkable.from conquering challenging workouts to embracing energetic group classes, each day unveiled a newfound strength. Beyond physical changes ,the holistic approach of diet and mindfulness activites, guided me towards self discovery and renewed sense of confidence. Moves and stretch studio is a place where commitment to your well being extends beyond the gym creating an environment where PCOD management increase in stamina and positive self image converts into a harmonious empowering experience',
+    author: 'Dr. Nupur Tidke',
     rating: 5,
   },
   {
     quote:
       "As a 30-year-old woman with a hectic lifestyle, Moves N Stretch Studio has been a game-changer in my postpartum recovery. Initially, I struggled with fragmented approaches, but their practical, well-researched methods made all the difference. The instructors (Mayur sir & Varsha mam)provide personalized, manageable fitness routines and a diet plan that's easy to follow. Their holistic approach has helped me regain strength and confidence, making the postpartum journey much more manageable. Highly recommended!",
-    author: "Anonymous",
+    author: 'Anonymous',
     rating: 5,
   },
 ];
@@ -52,11 +52,10 @@ export function Testimonials() {
             Success Stories
           </Badge>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
-            Real People, Real Results
+            Real People. Real Fat Loss. Real Food
           </h2>
           <p className="text-lg text-muted-foreground">
-            Join hundreds of satisfied clients who have transformed their health
-            with our guidance.
+            Short wins from Chatora Coach clients (online coaching).
           </p>
         </div>
 

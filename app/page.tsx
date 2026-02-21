@@ -9,8 +9,9 @@ import {
   FAQ,
   CTA,
   Footer,
-} from "@/components/landing";
-import { Testimonials } from "@/components/landing/testimonials";
+} from '@/components/landing';
+import { Testimonials } from '@/components/landing/testimonials';
+import { WhyUs } from '@/components/landing/why-us';
 
 export default function HomePage() {
   return (
@@ -22,6 +23,7 @@ export default function HomePage() {
       <StakesStrip />
       <Benefits />
       <RulesProtect />
+      <WhyUs />
       <FAQ />
       <Testimonials />
       <CTA />

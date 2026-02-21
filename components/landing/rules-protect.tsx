@@ -1,35 +1,36 @@
-"use client";
+'use client';
 
-import { Shield, ArrowRight } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Shield, ArrowRight } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export function RulesProtect() {
   const rules = [
     {
-      title: "Support Hours",
-      description: "Monday to Saturday. Sunday off (even coaches need rest!).",
+      title: 'Support Hours',
+      description: 'Monday to Saturday. Sunday off (even coaches need rest!).',
     },
     {
-      title: "Response Time",
-      description: "We reply to your queries within 24 hours.",
+      title: 'Response Time',
+      description: 'We reply to your queries within 24 hours.',
     },
     {
-      title: "Food Logging",
-      description: "Minimum once per day (non-negotiable—consistency is key).",
+      title: 'Food Logging',
+      description: 'Minimum once per day (non-negotiable—consistency is key).',
     },
     {
-      title: "Daily Steps",
-      description: "Target: 8,000+ steps per day (movement matters).",
+      title: 'Daily Steps',
+      description:
+        'Daily movement target: minimum 20–30 min activity (steps preferred, but flexible).',
     },
     {
-      title: "Non-Medical",
+      title: 'Non-Medical',
       description:
         "We don't treat medical conditions. Always follow doctor's guidance.",
     },
     {
-      title: "Non-Refundable",
+      title: 'Non-Refundable',
       description: "Payments are non-refundable. We're committed if you are.",
     },
   ];
