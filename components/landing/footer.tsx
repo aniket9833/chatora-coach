@@ -7,7 +7,7 @@ import { Instagram, Facebook, Youtube, Mail } from 'lucide-react';
 const navLinks = [
   { label: 'Plans', href: '/plans' },
   { label: 'FAQ', href: '#faq' },
-  { label: 'Privacy Policy', href: '#' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
   // { label: 'Terms', href: '#' },
 ];
 
@@ -41,16 +41,16 @@ export function Footer() {
               <Image
                 src="/logo.png"
                 alt="Chatora Coach Logo"
-                width={80}
-                height={80}
-                className="w-20 h-20 object-contain"
+                width={250}
+                height={250}
+                className="w-25 h-25 object-contain"
               />
-              <span className="font-serif text-md font-semibold text-foreground">
+              <span className="font-serif text-lg font-semibold text-foreground">
                 Chatora Coach
               </span>
             </Link>
-            <p className="text-sm text-foreground/80 leading-relaxed mb-1">
-              Foodies ke liye fat loss coaching — Diet nahi, portion sahi.
+            <p className="text-md text-foreground/80 leading-relaxed mb-1">
+              Foodies ke liye fat loss coaching - Diet nahi, portion sahi.
             </p>
             <p className="text-sm text-muted-foreground mb-5">
               Operated by Moves n Stretch.
@@ -106,7 +106,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-8 pt-5 border-t border-border">
-          <p className="text-sm text-muted-foreground text-center sm:text-left">
+          <p className="text-sm text-muted-foreground text-center sm:text-center">
             © 2026 Chatora Coach. All rights reserved.
           </p>
         </div>

@@ -81,7 +81,7 @@ export function WhyUs() {
             {/* Image card */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/healthy-lifestyle.jpg"
+                src="/images/why-us.jpg"
                 alt="Healthy meal preparation"
                 fill
                 className="object-cover"
