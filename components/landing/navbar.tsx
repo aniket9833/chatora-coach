@@ -46,9 +46,9 @@ export function Navbar() {
             <Image
               src="/logo.png"
               alt="Chatora Coach Logo"
-              width={250}
-              height={250}
-              className="w-12 sm:w-16 lg:w-20 h-12 sm:h-16 lg:h-20 object-contain"
+              width={400}
+              height={400}
+              className="w-25 sm:w-18 lg:w-25 h-25 sm:h-18 lg:h-25 mt-1 object-contain"
             />
           </Link>
 

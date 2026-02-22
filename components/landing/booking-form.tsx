@@ -123,15 +123,17 @@ Please confirm the booking details.`;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-md">
+      <DialogContent className="w-full max-w-md sm:max-w-lg">
         <DialogHeader>
-          <DialogTitle className="text-2xl">Book a Consultation</DialogTitle>
+          <DialogTitle className="text-xl sm:text-2xl">
+            Book a Consultation
+          </DialogTitle>
           <DialogDescription>
             Fill in your details and we&apos;ll contact you on WhatsApp
           </DialogDescription>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
           {/* Full Name Field */}
           <div className="space-y-2">
             <label

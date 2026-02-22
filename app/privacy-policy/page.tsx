@@ -44,11 +44,6 @@ export default function PrivacyPage() {
                 <li>Communication preferences</li>
                 <li>Feedback and testimonials</li>
               </ul>
-              <p className="text-gray-700 leading-relaxed mt-4">
-                We also automatically collect certain information when you visit
-                our website, including IP address, browser type, pages visited,
-                and time spent on pages.
-              </p>
             </section>
 
             {/* How We Use Information */}
@@ -107,7 +102,7 @@ export default function PrivacyPage() {
               </ul>
             </section>
 
-            {/* Cookies */}
+            {/* Cookies
             <section>
               <h2 className="text-2xl font-bold mb-4">7. Cookies</h2>
               <p className="text-gray-700 leading-relaxed">
@@ -116,11 +111,11 @@ export default function PrivacyPage() {
                 You can choose to disable or limit cookies, but this may affect
                 your ability to use certain features of our website.
               </p>
-            </section>
+            </section> */}
 
             {/* Contact Us */}
             <section>
-              <h2 className="text-2xl font-bold mb-4">8. Contact Us</h2>
+              <h2 className="text-2xl font-bold mb-4">7. Contact Us</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 If you have any questions about this Privacy Policy or our
                 privacy practices, please contact us at:
@@ -140,7 +135,7 @@ export default function PrivacyPage() {
             {/* Changes to Policy */}
             <section>
               <h2 className="text-2xl font-bold mb-4">
-                9. Changes to This Privacy Policy
+                8. Changes to This Privacy Policy
               </h2>
               <p className="text-gray-700 leading-relaxed">
                 We may update this Privacy Policy from time to time. We will
