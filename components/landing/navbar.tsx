@@ -35,7 +35,7 @@ export function Navbar() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-sm border-b border-border'
+          ? 'bg-card/95 backdrop-blur-md shadow-sm border-b border-border'
           : 'bg-transparent',
       )}
     >
@@ -58,7 +58,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs lg:text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="text-xs lg:text-sm font-medium text-primary hover:text-accent transition-colors border-b-2 border-transparent hover:border-accent"
               >
                 {link.label}
               </Link>
@@ -95,7 +95,7 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-base sm:text-lg font-medium text-foreground hover:text-primary transition-colors"
+                    className="text-base sm:text-lg font-medium text-primary hover:text-accent transition-colors"
                   >
                     {link.label}
                   </Link>

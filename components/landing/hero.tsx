@@ -10,11 +10,11 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-12 sm:pt-4 lg:pt-0 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-12 sm:pt-4 lg:pt-0 overflow-hidden bg-background"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 via-background to-accent/20" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(74,222,128,0.08),transparent_50%)]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 via-background to-accent/5" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(163,177,138,0.05),transparent_50%)]" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-center">
@@ -30,8 +30,8 @@ export function Hero() {
               </Badge>
             </div>
 
-            <h1 className="animate-fade-in-up animation-delay-100 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-balance">
-              Fat loss coaching <span className="text-primary">Diet nahi,</span>{' '}
+            <h1 className="animate-fade-in-up animation-delay-100 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-balance text-primary">
+              Fat loss coaching <span className="text-accent">Diet nahi,</span>{' '}
               portion sahi.
             </h1>
 
