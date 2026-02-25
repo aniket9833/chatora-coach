@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Instagram, Facebook, Youtube, Mail } from 'lucide-react';
 
 const navLinks = [
+  { label: 'About Us', href: '/about-us' },
   { label: 'Plans', href: '/plans' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Privacy Policy', href: '/privacy-policy' },
@@ -59,7 +60,7 @@ export function Footer() {
               href="mailto:movesnstretch@gmail.com"
               className="inline-flex items-center gap-2 text-sm text-background/90 hover:text-accent transition-colors"
             >
-              <Mail className="w-4 h-4 flex-shrink-0" />
+              <Mail className="w-4 h-4 shrink-0" />
               movesnstretch@gmail.com
             </a>
           </div>

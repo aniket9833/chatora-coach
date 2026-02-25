@@ -108,7 +108,7 @@ export function Plans({ showPaymentLinks = false }: PlansProps) {
                 )}
               </CardHeader>
 
-              <CardContent className="flex-grow">
+              <CardContent className="grow">
                 <div className="mb-6">
                   <span className="text-4xl font-bold text-primary">
                     {plan.price}
@@ -121,7 +121,7 @@ export function Plans({ showPaymentLinks = false }: PlansProps) {
                 <ul className="space-y-3">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex gap-3 text-sm">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                       <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}

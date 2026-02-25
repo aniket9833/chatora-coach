@@ -64,7 +64,7 @@ export function Testimonials() {
           {testimonials.map((testimonial) => (
             <Card
               key={testimonial.author}
-              className="bg-card border-border hover:shadow-lg transition-shadow h-[420px] flex flex-col"
+              className="bg-card border-border hover:shadow-lg transition-shadow h-96 flex flex-col"
             >
               <CardContent className="p-6 flex flex-col h-full">
                 {/* Rating */}

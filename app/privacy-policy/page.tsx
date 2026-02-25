@@ -11,7 +11,7 @@ export default function PrivacyPage() {
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
 
-      <section className="bg-gradient-to-b from-slate-50 to-white py-16">
+      <section className="bg-linear-to-b from-slate-50 to-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <h1 className="text-4xl font-bold mb-2 mt-5">Privacy Policy</h1>
           <p className="text-gray-600 mb-8">Last updated: February 2026</p>

@@ -11,6 +11,7 @@ import { BookingForm } from './booking-form';
 
 const navLinks = [
   { href: '#home', label: 'Home' },
+  { href: '/about-us', label: 'About' },
   { href: '/plans', label: 'Plans' },
   // { href: '#why-us', label: 'Why Us' },
   { href: '#faq', label: 'FAQ' },
@@ -42,7 +43,7 @@ export function Navbar() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+          <Link href="/" className="flex items-center gap-2 shrink-0">
             <Image
               src="/logo.png"
               alt="Chatora Coach Logo"

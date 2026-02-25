@@ -13,7 +13,7 @@ export function Hero() {
       className="relative min-h-screen flex items-center pt-12 sm:pt-4 lg:pt-0 overflow-hidden bg-background"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 via-background to-accent/5" />
+      <div className="absolute inset-0 bg-linear-to-br from-secondary/30 via-background to-accent/5" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(163,177,138,0.05),transparent_50%)]" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -69,7 +69,7 @@ export function Hero() {
                     key={item}
                     className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground"
                   >
-                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-primary shrink-0" />
                     <span>{item}</span>
                   </div>
                 ),
@@ -81,7 +81,7 @@ export function Hero() {
           <div className="animate-fade-in-up animation-delay-300 relative">
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               <div className="space-y-4">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative aspect-4/5 rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src="/images/hero-nutrition.jpg"
                     alt="Healthy Indian meals with roti and rice"
@@ -108,7 +108,7 @@ export function Hero() {
                     Diets Delivered
                   </p>
                 </div>
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl mt-2 sm:mt-0">
+                <div className="relative aspect-4/5 rounded-2xl overflow-hidden shadow-2xl mt-2 sm:mt-0">
                   <Image
                     src="/images/healthy-lifestyle.jpg"
                     alt="Real-life eating at home, office, and functions"
