@@ -9,6 +9,7 @@ import {
   FAQ,
   CTA,
   Footer,
+  TransformationGallery,
 } from '@/components/landing';
 import { Testimonials } from '@/components/landing/testimonials';
 import { WhyUs } from '@/components/landing/why-us';
@@ -26,6 +27,7 @@ export default function HomePage() {
       <WhyUs />
       <FAQ />
       <Testimonials />
+      <TransformationGallery />
       <CTA />
       <Footer />
     </main>

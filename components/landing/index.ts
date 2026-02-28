@@ -8,4 +8,5 @@ export { Plans } from "./plans";
 export { RulesProtect } from "./rules-protect";
 export { FAQ } from "./faq";
 export { CTA } from "./cta";
+export { TransformationGallery } from "./transformation-gallery";
 export { Footer } from "./footer";
