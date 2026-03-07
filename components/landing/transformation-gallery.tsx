@@ -163,7 +163,10 @@ export function TransformationGallery() {
                 key={transformation.id}
                 className="carousel-item flex-shrink-0 w-64 bg-card border-border overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <div className="relative w-full h-96">
+                <div
+                  className="relative w-full"
+                  style={{ aspectRatio: '7 / 5' }}
+                >
                   <Image
                     src={transformation.image}
                     alt={

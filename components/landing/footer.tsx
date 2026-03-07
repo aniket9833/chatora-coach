@@ -42,8 +42,8 @@ export function Footer() {
               <Image
                 src="/logo.png"
                 alt="Chatora Coach Logo"
-                width={250}
-                height={250}
+                width={500}
+                height={500}
                 className="w-25 h-25 object-contain"
               />
               <span className="font-serif text-lg font-semibold text-background">
