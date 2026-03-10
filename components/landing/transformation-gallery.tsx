@@ -2,12 +2,10 @@
 
 import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
-import { Badge } from '../ui/badge';
 
 interface TransformationImage {
   id: number;
   image: string;
-  title?: string;
 }
 
 const transformations: TransformationImage[] = [
@@ -43,14 +41,14 @@ export function TransformationGallery() {
 
         .carousel-track {
           display: flex;
-          gap: 2rem;
+          gap: 1.5rem;
           overflow-x: auto;
           padding-bottom: 1.5rem;
-          padding-top: 1rem;
+          padding-top: 0.5rem;
           scroll-snap-type: x mandatory;
           scroll-behavior: smooth;
           -webkit-overflow-scrolling: touch;
-          align-items: flex-start;
+          align-items: center;
         }
 
         .carousel-track::-webkit-scrollbar {
@@ -70,23 +68,15 @@ export function TransformationGallery() {
           position: relative;
           border-radius: 18px;
           overflow: hidden;
+          width: 340px;
           transition:
             transform 0.35s ease,
             box-shadow 0.35s ease;
-          /* wide aspect to accommodate side-by-side before/after */
-          width: 340px;
-        }
-
-        .t-card:nth-child(odd) {
-          margin-top: 0px;
-        }
-        .t-card:nth-child(even) {
-          margin-top: 32px;
         }
 
         .t-card:hover {
-          transform: translateY(-8px) scale(1.015);
-          box-shadow: 0 24px 56px rgba(0, 0, 0, 0.13);
+          transform: translateY(-6px);
+          box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
         }
 
         .t-card .img-wrap {
@@ -95,7 +85,6 @@ export function TransformationGallery() {
           position: relative;
         }
 
-        /* bottom gradient overlay */
         .t-card .img-wrap::after {
           content: '';
           position: absolute;
@@ -106,10 +95,19 @@ export function TransformationGallery() {
             transparent 55%
           );
           pointer-events: none;
-          border-radius: 18px;
         }
 
-        /* the "Before → After" badge sits at the bottom of each card */
+        .center-divider {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 50%;
+          width: 2px;
+          background: rgba(255, 255, 255, 0.55);
+          z-index: 5;
+          pointer-events: none;
+        }
+
         .ba-badge {
           position: absolute;
           bottom: 12px;
@@ -134,35 +132,19 @@ export function TransformationGallery() {
           gap: 8px;
         }
 
-        .ba-badge .dot-before {
+        .dot-before {
           width: 7px;
           height: 7px;
           border-radius: 50%;
           background: #f87171;
           display: inline-block;
         }
-        .ba-badge .dot-after {
+        .dot-after {
           width: 7px;
           height: 7px;
           border-radius: 50%;
           background: #4ade80;
           display: inline-block;
-        }
-        .ba-badge .arrow {
-          opacity: 0.7;
-          font-size: 10px;
-        }
-
-        /* divider line in the middle of each card */
-        .center-divider {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 50%;
-          width: 2px;
-          background: rgba(255, 255, 255, 0.55);
-          z-index: 5;
-          pointer-events: none;
         }
 
         .scroll-hint {
@@ -189,16 +171,18 @@ export function TransformationGallery() {
 
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <Badge variant="outline" className="mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <p className="gallery-body text-sm tracking-widest text-[#c9a87c] uppercase mb-3 font-medium">
             Visual Proof
-          </Badge>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
-            Client Transformations
+          </p>
+          <h2 className="gallery-heading text-4xl sm:text-5xl font-black text-[#1a1a1a] mb-4 leading-tight">
+            Real People,
+            <br />
+            <span style={{ color: '#c9a87c' }}>Real Results.</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            See the real results from our client&apos;s dedication and our
-            personalized approach.
+          <p className="gallery-body text-base text-[#7a6a5a]">
+            Every card shows the full journey — before on the left, after on the
+            right.
           </p>
         </div>
 
@@ -214,15 +198,12 @@ export function TransformationGallery() {
                   className="object-cover"
                   sizes="340px"
                 />
-                {/* subtle center line splitting before/after */}
                 <div className="center-divider" />
               </div>
-
-              {/* floating before → after pill */}
               <div className="ba-badge">
                 <span className="dot-before" />
                 Before
-                <span className="arrow">›</span>
+                <span style={{ opacity: 0.7, fontSize: '10px' }}>›</span>
                 After
                 <span className="dot-after" />
               </div>
