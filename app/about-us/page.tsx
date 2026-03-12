@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { CertificatesGallery } from './certificates-gallery';
 import { Award, CheckCircle, Heart, Users, BookOpen, Zap } from 'lucide-react';
+import { CTA } from '@/components/landing';
 
 export const metadata = {
   title: 'About Us | Chatora Coach - Our Story & Expertise',
@@ -43,33 +44,6 @@ const stats = [
   { number: '3000+', label: 'Diets Delivered', color: 'text-primary' },
   { number: '95%', label: 'Success Rate', color: 'text-rose-600' },
   { number: '4.8★', label: 'Average Rating', color: 'text-emerald-600' },
-];
-
-const trustPoints = [
-  {
-    title: 'Real Results from Real Clients',
-    desc: '1000+ clients have transformed their lives using the Portion Sahi System. Our case studies and testimonials speak for themselves.',
-  },
-  {
-    title: 'Science Meets Real Life',
-    desc: 'Our approach blends nutrition science with practical wisdom from working with diverse Indian households.',
-  },
-  {
-    title: 'Transparent Communication',
-    desc: "We are honest about what works, what doesn't, and what we can't do (medical conditions). No misleading promises.",
-  },
-  {
-    title: 'Continuous Learning',
-    desc: 'We invest in ongoing education and stay updated with latest nutrition research and coaching methodologies.',
-  },
-  {
-    title: 'Dedicated Support',
-    desc: 'Mon–Sat support with 24-hour response times. Your coach is invested in your success.',
-  },
-  {
-    title: 'Accountability Built In',
-    desc: 'Regular check-ins, food logging, and structured progress tracking ensure you stay on track.',
-  },
 ];
 
 export default function AboutUsPage() {
@@ -203,50 +177,8 @@ export default function AboutUsPage() {
       {/* ── Certificates (Client Component) ── */}
       <CertificatesGallery />
 
-      {/* Why Trust Us */}
-      <section className="py-20 lg:py-28 bg-secondary/30">
-        <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-          <h2 className="font-serif text-3xl lg:text-4xl font-bold mb-12 text-center text-primary">
-            Why Trust Chatora Coach?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {trustPoints.map((item, i) => (
-              <div key={i} className="flex gap-4">
-                <CheckCircle className="w-6 h-6 text-accent shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="py-16 lg:py-24 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.1),transparent_50%)]" />
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-serif text-3xl lg:text-4xl font-bold mb-6 text-primary-foreground">
-              Ready to Start Your Journey?
-            </h2>
-            <p className="text-lg text-primary-foreground/90 mb-8">
-              Join 1000+ clients who have transformed their lives with
-              science-backed coaching and real-food nutrition.
-            </p>
-            <a
-              href="/plans"
-              className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-3 rounded-md font-medium hover:bg-accent/90 transition-colors"
-            >
-              Explore Our Plans
-              <Zap className="w-5 h-5" />
-            </a>
-          </div>
-        </div>
-      </section>
+      <CTA />
 
       <Footer />
     </main>

@@ -10,11 +10,12 @@ import { cn } from '@/lib/utils';
 import { BookingForm } from './booking-form';
 
 const navLinks = [
-  { href: '#home', label: 'Home' },
+  { href: '/', label: 'Home' },
   { href: '/about-us', label: 'About' },
+  { href: '/portion-sahi', label: 'Portion Sahi', isGradient: true },
   { href: '/plans', label: 'Plans' },
   // { href: '#why-us', label: 'Why Us' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '/plans#faq', label: 'FAQ' },
   // { href: '#contact', label: 'Contact' },
 ];
 
@@ -59,7 +60,12 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs lg:text-sm font-medium text-primary hover:text-accent transition-colors border-b-2 border-transparent hover:border-accent"
+                className={cn(
+                  'text-xs lg:text-sm font-medium transition-colors border-b-2 border-transparent',
+                  link.isGradient
+                    ? 'bg-linear-to-r from-accent via-orange-600 to-accent bg-clip-text text-transparent hover:opacity-80 hover:border-transparent font-bold'
+                    : 'text-primary hover:text-accent hover:border-accent',
+                )}
               >
                 {link.label}
               </Link>
@@ -96,7 +102,12 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-base sm:text-lg font-medium text-primary hover:text-accent transition-colors"
+                    className={cn(
+                      'text-base sm:text-lg font-medium transition-colors',
+                      link.isGradient
+                        ? 'bg-linear-to-r from-accent via-orange-600 to-accent bg-clip-text text-transparent font-bold'
+                        : 'text-primary hover:text-accent',
+                    )}
                   >
                     {link.label}
                   </Link>

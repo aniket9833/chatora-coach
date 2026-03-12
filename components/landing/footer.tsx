@@ -7,7 +7,7 @@ import { Instagram, Facebook, Youtube, Mail } from 'lucide-react';
 const navLinks = [
   { label: 'About Us', href: '/about-us' },
   { label: 'Plans', href: '/plans' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'FAQ', href: '/plans#faq' },
   { label: 'Privacy Policy', href: '/privacy-policy' },
   // { label: 'Terms', href: '#' },
 ];

@@ -172,13 +172,9 @@ export function TransformationGallery() {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="gallery-body text-sm tracking-widest text-[#c9a87c] uppercase mb-3 font-medium">
-            Visual Proof
-          </p>
           <h2 className="gallery-heading text-4xl sm:text-5xl font-black text-[#1a1a1a] mb-4 leading-tight">
             Real People,
-            <br />
-            <span style={{ color: '#c9a87c' }}>Real Results.</span>
+            <span style={{ color: '#c9a87c' }}> Real Results.</span>
           </h2>
           <p className="gallery-body text-base text-[#7a6a5a]">
             Every card shows the full journey — before on the left, after on the

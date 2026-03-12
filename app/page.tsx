@@ -12,6 +12,7 @@ import {
   TransformationGallery,
 } from '@/components/landing';
 import { Testimonials } from '@/components/landing/testimonials';
+import WhyTrust from '@/components/landing/why-trust';
 import { WhyUs } from '@/components/landing/why-us';
 
 export default function HomePage() {
@@ -19,15 +20,16 @@ export default function HomePage() {
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
-      <ProblemEmpathy />
+      <TransformationGallery />
+      <Testimonials />
+      <WhyTrust />
+      {/* <ProblemEmpathy />
       <SystemPlan />
       <StakesStrip />
       <Benefits />
       <RulesProtect />
       <WhyUs />
-      <FAQ />
-      <Testimonials />
-      <TransformationGallery />
+      <FAQ /> */}
       <CTA />
       <Footer />
     </main>

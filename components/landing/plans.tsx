@@ -138,8 +138,8 @@ export function Plans({ showPaymentLinks = false }: PlansProps) {
                   className="w-full"
                 >
                   <Button
-                    className={`w-full transition-all duration-200 hover:opacity-90 ${!plan.popular ? 'bg-transparent' : ''}`}
-                    variant={plan.popular ? 'default' : 'outline'}
+                    className="w-full transition-all duration-200 hover:opacity-90"
+                    variant="default"
                   >
                     START
                   </Button>
