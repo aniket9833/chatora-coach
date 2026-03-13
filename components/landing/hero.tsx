@@ -30,8 +30,11 @@ export function Hero() {
               </Badge>
             </div>
 
-            <h1 className="animate-fade-in-up animation-delay-100 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-balance text-primary">
-              Fat loss coaching <span className="text-accent">Diet nahi,</span>{' '}
+            <h1 className="animate-fade-in-up animation-delay-100 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-primary">
+              Fat loss coaching,
+              <br />
+              <span className="text-accent">Diet nahi,</span>
+              <br />
               portion sahi.
             </h1>
 

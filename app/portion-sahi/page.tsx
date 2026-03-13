@@ -7,6 +7,12 @@ import {
   PortionSahiHowItWorks,
   CTA,
   Footer,
+  ProblemEmpathy,
+  SystemPlan,
+  StakesStrip,
+  Benefits,
+  RulesProtect,
+  WhyUs,
 } from '@/components/landing';
 
 export default function PortionSahiPage() {
@@ -14,6 +20,12 @@ export default function PortionSahiPage() {
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <PortionSahiHero />
+      <ProblemEmpathy />
+      <SystemPlan />
+      <StakesStrip />
+      <Benefits />
+      <RulesProtect />
+      <WhyUs />
       <PortionSahiSystem />
       <PortionSahiBenefits />
       <PortionSahiGallery />

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, CheckCircle, Leaf } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function PortionSahiHero() {
   return (
@@ -75,12 +76,13 @@ export function PortionSahiHero() {
           {/* Image Placeholder */}
           <div className="animate-fade-in-up animation-delay-200 relative h-80 sm:h-96 lg:h-125 flex items-center justify-center">
             <div className="relative w-full h-full bg-linear-to-br from-secondary to-secondary/50 rounded-2xl overflow-hidden flex items-center justify-center border-2 border-accent/20">
-              <div className="text-center">
-                <Leaf className="w-20 h-20 text-accent/40 mx-auto mb-4" />
-                <p className="text-muted-foreground text-sm">
-                  Balanced Indian Portion
-                </p>
-              </div>
+              <Image
+                src="/images/food.jpg"
+                alt="Healthy Indian meals with roti and rice"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+                priority
+              />
             </div>
           </div>
         </div>
